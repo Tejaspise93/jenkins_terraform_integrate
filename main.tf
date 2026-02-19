@@ -35,3 +35,12 @@ resource "aws_subnet" "my_subnet_2" {
     Name = "my_subnet_2"
   }
 }
+
+resource "aws_subnet" "my_subnet_3" {
+  vpc_id = aws_vpc.my_vpc.id
+  cidr_block = "10.0.3.0/24"
+  availability_zone = "ap-south-1c"
+  tags = {
+    Name = "my_subnet_3"
+  }
+}
